@@ -24,9 +24,9 @@ li {
 
 img {
     display: block;
-   /*max-width: 100%;
+   max-width: 100%;
     width: 100%;
-    height: auto;*/
+    height: auto;
 }
 
 button {
@@ -38,12 +38,16 @@ button {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Space Grotesk" sans-serif;
+    font-family: "Space Grotesk", sans-serif;
 }
 
 body {
     background: var(--white);
     min-height: 100vh;
+}
+
+section {
+    padding-block: 128px;
 }
 
 .header {
@@ -123,7 +127,7 @@ nav {
 
 .hero {
     height: calc(100vh - 60px);
-    background: radial-gradient(ellipse 75% 55% at center, #FDD34D26, #FDD34D00);
+    background: radial-gradient(ellipse 80% 60% at 30% 50%, #FDD34D30, transparent);
 }
 
 .container {
@@ -149,25 +153,33 @@ nav {
 
 .hero__tag {
     display: inline-block;
-    background-color: var(--accent-secondary);
-    color: var(--text-primary);
-    font-size: 11px;
     font-weight: 700;
+     font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 1.2px;
     text-transform: uppercase;
-    padding: 6px 14px;
-    border-radius: 4px;
-    letter-spacing: 0.05em;
+    padding: 6px 16px;
+    background-color: var(--accent-secondary);
+    border-radius: 9999px;
+    margin-bottom: 32px;
 }
 
-.hero__article h1 {
-    font-size: 72px;
+.hero__title {
+    font-family: "Space Grotesk", sans-serif;
     font-weight: 700;
-    line-height: 1.05;
-    font-family: "Space Grotesk";
+    font-size: 120px;
+    line-height: 117px;
+    letter-spacing: -6.4px;
 }
 
-.hero__article h1 span {
-    color: var(--accent-subtle);
+.hero__title span {
+     letter-spacing: 0;
+     background: linear-gradient(to right, 
+     var(--accent-primary),
+     var(--accent-subtle)
+     );
+     background-clip: text;
+     color: transparent;
 }
 
 .hero__article p {
@@ -212,6 +224,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .hero__img-wrapper img {
@@ -222,12 +235,14 @@ nav {
 .hero__img-wrapper img:first-child {
     height: 80%;
     right: 0;
+    border-radius: 68px;
 }
 
 .hero__img-wrapper img:last-child {
-    height: 35%;
-    bottom: 10%;
-    right: 5%;
+    height: 40%;
+    bottom: 5%;
+    left: 5%;
+    border-radius: 68px;
 }
 /*About as*/
 
@@ -336,6 +351,8 @@ nav {
     display: grid;
     grid-template-columns: minmax(auto, 400px) min-content;
     justify-content: space-between;
+    align-items: end;
+    margin-bottom: 64px;
 }
 .gallery__head-title {
     font-weight: 900;
@@ -357,19 +374,84 @@ nav {
 }
 
 .gallery__head-link {
-    font-family: 'Space Grotesk' sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 14px;
     font-weight: 700;
-    line-height: 700;
+    line-height: 20px;
     letter-spacing: 1.4px;
     color: var(--accent-primary);
     text-transform: uppercase;
     white-space: nowrap;
 
-    display: flex;
+    display: flex; 
     align-items: center;
     gap: 8px;
 }
+
+.gallery__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 388px);
+    gap: 24px;
+}
+
+.gallery__card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 48px;
+}
+
+.gallery__card-img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.gallery__card-overley {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), 
+    transparent );
+    border-radius: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery__card:hover .gallery__card-overley {
+    opacity: 1;
+}
+
+
+
+.gallery__card--01 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.gallery__card--01 .gallery__card-overley {
+    padding: 40px;
+}
+
+.gallery__card--02 {
+    grid-column: span 2;
+}
+
+.gallery__card--02 .gallery__card-overley {
+    padding: 32px;
+}
+
+.gallery__card--03,
+.gallery__card--04 {
+   grid-column: span 1;
+}
+.gallery__card--03 .gallery__card-overley,
+.gallery__card--04 .gallery__card-overley {
+    padding: 24px;
+}
+
 /*About*/
 
 .history {
@@ -400,10 +482,18 @@ nav {
     line-height: 24px;
 }
 
+.table-div {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--bg-primary);
+}
+
 .table {
     max-width: 100%;
     width: 100%;
-    border-radius: 48px;
+    overflow: hidden;
+    border-collapse: separate;
+    border-spacing: 0;
 }
 
 .history__evolution-thead {
@@ -417,7 +507,7 @@ nav {
 
 .history__evolution-thead th {
    padding: 24px 32px; 
-   font-family: "Space Grotesk" sans-serif;
+   font-family: "Space Grotesk", sans-serif;
    font-weight: 700;
    font-size: 12px;
    line-height: 16px;
@@ -448,33 +538,175 @@ nav {
 
 .evolution__span-muted {
     background-color: #e1e3e3;
+    padding: 4px 12px;
     border-radius: 48px;
 }
 
 .evolution__span--primary {
     background-color: var(--accent-subtle);
+     padding: 4px 12px;
     border-radius: 48px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
 }
 
 .evolution__span-secondari {
     background-color: var(--accent-secondary);
+     padding: 4px 12px;
     border-radius: 48px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.history__evolution-tbody tr:nth-child(2) {
+    background-color: #FFF9E6;
+}
+
+.history__evolution-tbody tr:last-child th {
+    border-bottom-left-radius: 16px;
+}
+
+.history__evolution-tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 16px;
 }
 
 /*Join*/
 
-.join {
-    background-color: var(--bg-primary);
+ .join {
+    background-color: var(--bg-secondary);
+    padding: 128px 48px;
 }
 
-/*<svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16L6.575 14.6L12.175 9Z"
-                />
-              </svg>*/
+.join__container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.join__auter-wrapper {
+    background: linear-gradient(135deg, 
+    #8D4A00,
+    #7C4000);
+    padding: 8px;
+    border-radius: 48px;
+} 
+
+.join__inner-wrapper {
+    background-color: var(--bg-secondary);
+    border-radius: 42px;
+    padding: 80px;
+    display: flex;
+    gap: 64px;
+}
+
+.join__text-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.join__title {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -3px;
+    color: var(--text-primary);
+}
+
+.join__subtitle {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.join__numbers {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.join__numbers-list {
+    display: flex;
+}
+
+.join__numbers-list li {
+    position: relative;
+    max-width: 48px;
+    width: 100%;
+    aspect-ratio: 1/1;
+    padding: 4px;
+    border: 2px solid var(--accent-subtle);
+    border-radius: 9999px;
+    background-color: var(--bg-secondary);
+}
+
+.join__numbers-list li:not(:first-child) {
+    margin-left: -8px;
+}
+
+.join__numbers-list li img {
+    border-radius: 9999px;
+}
+
+.join__numbers-count {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+.join__form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+} 
+
+.join__form-input {
+    margin-bottom: 16px;
+}
+
+.join__form-input label {
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+    color: var(--text-secondary);
+}
+
+.join__form-input input {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    line-height: 26px;
+    padding: 16px 24px;
+    background-color: #f0f1f1;
+    border: none;
+    border-radius: 12px;
+}
+
+.join__form-submite {
+    border: none;
+    cursor: pointer;
+    background-color: var(--accent-primary);
+    color: var(--text-btn);
+    padding: 14px 28px;
+    border-radius: 9999px;
+    font-size: 14px;
+    font-weight: 600;
+    width: fit-content;
+    margin-bottom: 12px;
+}
+
+.join__form-warning {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}

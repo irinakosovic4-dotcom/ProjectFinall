@@ -14,7 +14,7 @@
         <nav>
             <a href="#" class="logo">SOLARIUM</a>
             <ul class="nav-link">
-                <li><a href="#" class="nav_li">Trends</a></li>
+                <li><a href="#" class="nav_li">trends</a></li>
                 <li><a href="#" class="nav_li">Arctive</a></li>
                 <li><a href="#" class="nav_li">Drons</a></li>
                 <li><a href="#" class="nav_li">Commynaliti</a></li>
@@ -27,7 +27,7 @@
             <div class="container hero__container">
                 <div class="hero__article">
                     <span class="hero__tag">The Y2K Renaissance</span>
-                    <h1>Y2K Era & <span>Streetwear</span></h1>
+                    <h1 class="hero__title">Y2K Era & <span>Streetwear</span></h1>
                     <p>Your Style — Your Rules. Curating the sun-drenched aesthetics of the millennium for the modern concrete jungle.</p>
                     <div class="btn-wrapper">
                         <button class="btn-primary">Explore Archive →</button>
@@ -76,7 +76,7 @@ Curated for the bold.</p>
             </a>
         </div>
         <ul class="gallery__list">
-            <li class="gallery__card">
+            <li class="gallery__card gallery__card--01">
             <img src="/images/Galery_1.png" class="gallery__card-img">
             <div class="gallery__card-overley card__overley">
             <span class="card__overley-tag">01 / Arhive</span>
@@ -86,7 +86,7 @@ Curated for the bold.</p>
             </div>
             </div>
             </li>
-             <li class="gallery__card">
+             <li class="gallery__card gallery__card--02">
                 <img src="/images/Galery_2.png" class="gallery__card-img">
             <div class="gallery__card-overley card__overley">
             <span class="card__overley-tag">02 / Foother</span>
@@ -96,7 +96,7 @@ Curated for the bold.</p>
             </div>
             </div>
              </li>
-             <li class="gallery__card">
+             <li class="gallery__card gallery__card--03">
                 <img src="/images/Galery_3.png" class="gallery__card-img">
             <div class="gallery__card-overley card__overley">
             <span class="card__overley-tag">03 / Quwether</span>
@@ -106,7 +106,7 @@ Curated for the bold.</p>
             </div>
             </div>
              </li>
-             <li class="gallery__card">
+             <li class="gallery__card gallery__card--04">
                 <img src="/images/Galery_3.png" class="gallery__card-img">
             <div class="gallery__card-overley card__overley">
             <span class="card__overley-tag">04 / Eccessories</span>
@@ -128,6 +128,7 @@ Curated for the bold.</p>
         <p class="history__submite">How the urban landscape transformed from the analog 90s to the
 digital future.</p>
         </div>
+        <div class="table-div">
         <table class="table">
             <thead class="history__evolution-thead">
                 <tr>
@@ -164,31 +165,45 @@ digital future.</p>
                 </tr>
             </tbody>
         </table>
+        </div>
     </div>
 </section>
 
 
 <section class="join" id="join">
     <div class="container join__container">
-        <div class="join__text-wrapper">
-            <h2 class="join__title"></h2>
-            <p class="join__submite"></p>
-        </div>
-        <ul>
-            <li>
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-            </li>
-        </ul>
-    </div>
-    <form class="join__form">
-        <div>
-            <label for=""></label>
-            <input type="text">
-        </div>
-        <div></div>
-    </form>
+        <div class="join__auter-wrapper">
+        <div class="join__inner-wrapper">
+            <div class="join__text-wrapper">
+                <h2 class="join__title">Join the Movement</h2>
+                <p class="join__subtitle">Sign up to receive early access to archive
+                     drops, community lookbooks, and sun-drenched 
+                     style guides.
+                    </p>
+                    <div class="join__numbers">
+                        <ul class="join__numbers-list">
+                        <li class="join__numbers-item"><img src="/images/join-1.png" alt="" width="36" height="36"/></li>
+                        <li class="join__numbers-item"><img src="/images/join-2.png" alt="" width="36" height="36"/></li>
+                        <li class="join__numbers-item"><img src="/images/join-3.png" alt="" width="36" height="36"/></li>
+                    </ul>
+                    <span class="join__numbers-count">+2,400 members</span>
+                    </div>
+            </div>
+            <form class="join__form">
+                <div class="join__form-input">
+                    <label for="name"><span class="span-text">Fuul Name</span></label>
+                    <input id="name" name="nane" type="text" placeholder="Alex Rivia">
+                </div>
+                <div class="join__form-input">
+                    <label for="email"><span class="span-text">email adress</span></label>
+                    <input type="email" placeholder="alex@solarium">
+                </div>
+                <button type="submit" class="join__form-submite">Authenticate profile</button>
+                <p class="join__form-warning"><span class="span-text"> By join you agree to our curator terns and lifestyle guedelines</spa></p>
+            </form>
+            </div>
+            </div>
+            </div>
 </section>
     </main>
 </body>
