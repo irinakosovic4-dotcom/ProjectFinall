@@ -716,6 +716,7 @@ nav {
 /* Footre */
 
 .footer {
+    font-family: 'Be Vietnam Pro';
     background-color: var(--bg-primary);
     border-top: 1px solid rgba(0,0,0,0.1);
     padding: 24px 0;
