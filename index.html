@@ -14,12 +14,12 @@
         <nav>
             <a href="#" class="logo">SOLARIUM</a>
             <ul class="nav-link">
-                <li><a href="#" class="nav_li">trends</a></li>
-                <li><a href="#" class="nav_li">Arctive</a></li>
-                <li><a href="#" class="nav_li">Drons</a></li>
-                <li><a href="#" class="nav_li">Commynaliti</a></li>
+                <li><a href="#trends" class="nav_li">trends</a></li>
+                <li><a href="#gallery" class="nav_li">Arctive</a></li>
+                <li><a href="#evolution" class="nav_li">Drons</a></li>
+                <li><a href="#footer" class="nav_li">Commynaliti</a></li>
             </ul>
-            <a href="#" class="join">Join the club</a>
+            <a href="#" class="animation-1 nav-join" >Join the club</a>
         </nav>
     </header>
     <main>
@@ -30,13 +30,13 @@
                     <h1 class="hero__title">Y2K Era & <span>Streetwear</span></h1>
                     <p>Your Style — Your Rules. Curating the sun-drenched aesthetics of the millennium for the modern concrete jungle.</p>
                     <div class="btn-wrapper">
-                        <button class="btn-primary">Explore Archive →</button>
-                        <button class="btn-secondary">View Drops</button>
+                        <button class="animation-1 btn-primary">Explore Archive →</button>
+                        <button class="animation-2 btn-secondary">View Drops</button>
                     </div>
                 </div>
                 <div class="hero__img-wrapper">
-                    <img src="/images/hero_image-1.png" alt="hero-1">
-                    <img src="/images/hero_image-2.png" alt="hero-2">
+                    <img src="/images/hero_image-1.png" alt="hero-1" class="animation-img">
+                    <img src="/images/hero_image-2.png" alt="hero-2" class="animation-img">
                 </div>
             </div>
         </section>
@@ -198,7 +198,7 @@ digital future.</p>
                     <label for="email"><span class="span-text">email adress</span></label>
                     <input type="email" placeholder="alex@solarium">
                 </div>
-                <button type="submit" class="join__form-submite">Authenticate profile</button>
+                <button type="submit" class="animation-1 join__form-submite">Authenticate profile</button>
                 <p class="join__form-warning"><span class="span-text"> By join you agree to our curator terns and lifestyle guedelines</spa></p>
             </form>
             </div>
@@ -206,5 +206,45 @@ digital future.</p>
             </div>
 </section>
     </main>
+    <footer class="footer" id="footer">
+    <div class="container footer__container">
+        <a href="#" class="logo">SOLARIUM</a>
+        <ul class="footer__links">
+            <li><a href="https://www.instagram.com/">Instagram</a></li>
+            <li><a href="https://x.com/">Twitter</a></li>
+            <li><a href="https://www.tiktok.com/">TikTok</a></li>
+            <li><a href="https://discord.com/">Discord</a></li>
+        </ul>
+        <p class="footer__copy">© 2024 SOLARIUM ARCHIVE. CURATED IN LIGHT.</p>
+    </div>
+</footer>
+
+    <div class="modal-overlay" id="modal">
+    <div class="modal">
+        <button class="modal__close" id="modalClose">✕</button>
+        
+        <div class="modal__img-wrapper">
+            <img src="/images/modal.png" alt="sneaker">
+            <span class="modal__badge">LIMITED</span>
+        </div>
+
+        <h2 class="modal__title">SECRET DROPS</h2>
+        <p class="modal__subtitle">You've unlocked a sun-drenched exclusive reward for the new season collection.</p>
+
+        <div class="modal__discount">
+            <span class="modal__discount-percent">-15%</span>
+            <span class="modal__discount-text">OFF YOUR NEXT ORDER</span>
+        </div>
+
+        <div class="modal__code-wrapper">
+            <span class="modal__code"> GOITEENS-STYLE</span>
+        </div>
+
+        <button class="modal__copy"> Copy Code</button>
+        <p class="modal__valid">VALID FOR THE NEXT 24 HOURS ONLY</p>
+    </div>
+</div>
+
+<script src="/js/app.js"></script>
 </body>
 </html>
