@@ -17,6 +17,10 @@
   --accent-subtle: #FE973C;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 ul,
 li {
     list-style: none;
@@ -42,7 +46,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-    background-color: var(--white);
+    font-family: "Space Grotesk", sans-serif;
+    background-color: var(--bg-primary);
     min-height: 100vh;
 }
 
@@ -51,7 +56,7 @@ section {
 }
 
 .header {
-   position: static;
+   position: sticky;
    top: 0;
 }
 
@@ -84,7 +89,7 @@ nav {
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
-    opacity: 0,7;
+    opacity: 0.7;
     position: relative;
     transition: opacity 2s;
 }
@@ -146,7 +151,7 @@ nav {
 }
 
 .hero__article {
-    grid-column: span 6;
+    grid-column: span 7;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -219,12 +224,10 @@ nav {
 }
 
 .hero__img-wrapper {
-    grid-column: span 6;
+    grid-column: span 5;
     position: relative;
     height: 100%;
 }
-
-
 
 .hero__img-wrapper img:first-child {
     position: absolute;
@@ -239,12 +242,12 @@ nav {
 .hero__img-wrapper img:last-child {
     position: absolute;
     max-width: 256px;
-    aspect-ratio: 1/1;
     width: 100%;
-    height: 265%;
+    aspect-ratio: 1/1;
     bottom: -8%;
     left: -8%;
     border-radius: 48px;
+    transform: rotate(-6deg);
 }
 /*About as*/
 
@@ -268,38 +271,41 @@ nav {
     gap: 24px;
 }
 
-.about__content h2 {
-    font-size: 40px;
+.about__title {
+    font-size: 60px;
     font-weight: 700;
-    font-family: "Space Grotesk";
+    font-family: "Space Grotesk", sans-serif;
     color: var(--text-primary);
-    line-height: 1.2;
+    line-height: 60px;
 }
 
-.about__content p {
-    font-size: 15px;
+.about__subtitle {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
     color: var(--text-secondary);
-    line-height: 1.6;
 }
 
 .about__link {
+    font-family: "Space Grotesk", sans-serif;
     color: var(--accent-primary);
     font-weight: 700;
 }
 
-.about__p {
+.about__subtitle-text {
+    font-family: 'Space Grotesk', sans-serif;
     border-left: 3px solid var(--accent-secondary);
     padding-left: 20px;
-}
-
-.about__quote p {
     font-size: 16px;
-    font-style: italic;
     color: var(--text-primary);
     font-weight: 500;
 }
 
+
+
 .about__list {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -454,6 +460,40 @@ nav {
     padding: 24px;
 }
 
+.card__overley-tag {
+    display: inline-block;
+    background-color: var(--accent-primary);
+    color: var(--text-btn);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    width: fit-content;
+    align-self: flex-end;
+}
+
+.card__overley-dis {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.card__overley-lineup {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card__overley-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    font-family: "Space Grotesk";
+}
 /*About*/
 
 .history {
@@ -739,12 +779,36 @@ nav {
     font-size: 13px;
     font-weight: 600;
     color: var(--text-secondary);
-    text-transform: capitalize;
-    transition: color 0.3s ease;
+    text-transform: uppercase;
+    opacity: 0.7;
+    position: relative;
+    transition: opacity 2s;
+   
 }
 
 .footer__links a:hover {
+    opacity: 1;
     color: var(--accent-primary);
+}
+
+.footer__links a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #8B5E3C;
+    transition: width 0.3s ease;
+}
+
+.footer__links a:hover {
+    color: #8B5E3C;
+    opacity: 1;
+}
+
+.footer__links a:hover::after {
+    width: 100%;
 }
 
 .footer__copy {
@@ -780,6 +844,14 @@ nav {
 
 .animation-2:hover {
     transform: scale(0.97) translateY(4px);
+}
+
+.history__evolution-tbody tr {
+    transition: background-color 0.2 ease;
+}
+
+.history__evolution-tbody tr:hover {
+    background-color: var(--accent-subtle);
 }
 
 
@@ -863,16 +935,19 @@ nav {
 }
 
 .modal__title {
-    font-size: 28px;
+    font-family: 'Space Grotesk';
+    font-size: 36px;
     font-weight: 900;
-    letter-spacing: -1px;
+    letter-spacing: -0.9px;
     margin-bottom: 12px;
 }
 
 .modal__subtitle {
-    font-size: 14px;
+    font-family: 'Be Vietnam Pro';
+    font-weight: 400;
+    font-size: 16px;
     color: var(--text-secondary);
-    line-height: 1.6;
+    line-height: 26px;
     margin-bottom: 24px;
 }
 
