@@ -1,0 +1,30 @@
+# SOLARIUM — Y2K Era & Streetwear
+
+## Опис проекту
+
+SOLARIUM — це сучасний веб-сайт присвячений Y2K естетиці та стріт-культурі. Проект створений як лендінг для модного бренду з акцентом на урбаністичний стиль та естетику нульових.
+
+## Секції сайту
+
+- **Hero** — головний екран з заголовком та фото
+- **About** — інформація про Y2K тренд
+- **Trend Gallery** — галерея трендових образів
+- **Evolution of Style** — таблиця еволюції стилів від 90-х до сьогодні
+- **Join the Movement** — форма підписки на розсилку
+- **Footer** — посилання на соціальні мережі
+
+## Технології
+
+- HTML5
+- CSS3 (Flexbox, Grid, CSS Variables, Animations)
+- JavaScript (Modal, smooth scroll)
+- Google Fonts (Space Grotesk, Be Vietnam Pro)
+
+## Як запустити
+
+1. Клонуй репозиторій
+2. Відкрий `index.html` у браузері або запусти через Live Server у VS Code
+
+## Автор
+
+Створено в рамках курсу GoITeens Frontend
